@@ -1,12 +1,28 @@
 <template>
   <div id="app">
-    <!--<div id="nav">-->
-      <!--<router-link to="/">Home</router-link> |-->
-      <!--<router-link to="/about">About</router-link>-->
-    <!--</div>-->
-    <router-view/>
+    <Home></Home>
   </div>
 </template>
+
+<script>
+    import Home from "./views/Home";
+    export default {
+        components: {Home},
+        comments:{
+            'Home': ()=>import('./views/Home.vue')
+        },
+        name: '',
+        props: {
+
+        },
+        methods:{
+
+        },
+        mounted: function () {
+
+        }
+    }
+</script>
 
 <style>
   @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
@@ -17,5 +33,7 @@
   .medium     { font-weight: 500 }
   .bold       { font-weight: 700 }
   .bolder     { font-weight: 900 }
+
+  html, body { height:100%; overflow:hidden }
 
 </style>

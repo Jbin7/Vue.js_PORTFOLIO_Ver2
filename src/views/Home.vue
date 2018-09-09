@@ -57,7 +57,7 @@
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>
+              <v-list-tile-title @click="route(item.text)">
                 {{ item.text }}
               </v-list-tile-title>
             </v-list-tile-content>
@@ -92,37 +92,20 @@
       </v-btn>
       <v-btn icon large>
         <v-avatar size="32px" tile>
-          <img
-                  src="https://vuetifyjs.com/static/doc-images/logo.svg"
-                  alt="Vuetify"
-          >
+          <!--<img-->
+                  <!--src="https://vuetifyjs.com/static/doc-images/logo.svg"-->
+                  <!--alt="Vuetify"-->
+          <!--&gt;-->
         </v-avatar>
       </v-btn>
     </v-toolbar>
+
     <v-content>
-      <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          <v-tooltip right>
-            <v-btn
-                    slot="activator"
-                    :href="source"
-                    icon
-                    large
-                    target="_blank"
-            >
-              <v-icon large>code</v-icon>
-            </v-btn>
-            <span>Source</span>
-          </v-tooltip>
-          <v-tooltip right>
-            <v-btn slot="activator" icon large href="https://codepen.io/johnjleider/pen/EQOYVV" target="_blank">
-              <v-icon large>mdi-codepen</v-icon>
-            </v-btn>
-            <span>Codepen</span>
-          </v-tooltip>
-        </v-layout>
+      <v-container>
+          <router-view/>
       </v-container>
     </v-content>
+
     <v-btn
             fab
             bottom
@@ -201,13 +184,15 @@
 </template>
 
 <script>
+    import router from "../router";
+
     export default {
         data: () => ({
             dialog: false,
             drawer: null,
             items: [
                 { icon: 'contacts', text: 'Contacts' },
-                { icon: 'history', text: 'Frequently contacted' },
+                { icon: 'history', text: 'Profile' },
                 { icon: 'content_copy', text: 'Duplicates' },
                 {
                     icon: 'keyboard_arrow_up',
@@ -240,6 +225,11 @@
         }),
         props: {
             source: String
+        },
+        methods:{
+            route(text){
+                router.push(text)
+            }
         }
     }
 </script>
