@@ -1,13 +1,11 @@
 <template>
     <div class="profile_background_img">
-        <Character></Character>
     </div>
 </template>
 
 <script>
     export default {
         components:{
-            'Character': ()=>import('@/components/Character.vue')
         },
         name: '',
         props: {

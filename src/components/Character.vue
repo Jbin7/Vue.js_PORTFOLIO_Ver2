@@ -1,6 +1,6 @@
 <template>
-    <div style="width:250px; height: 250px; position: absolute; top:65%;">
-        <div class="hitokage-run-left"></div>
+    <div class="character-container">
+        <div class="hitokage-run-right"></div>
     </div>
 </template>
 
@@ -21,6 +21,27 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    .character-container{
+        width:300px;
+        height: 300px;
+        margin-left:auto;
+        margin-right: auto;
+        z-index: 9999;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 2920px) {
+    .character-container{
+        width:300px;
+        height: 300px;
+        margin-left:auto;
+        margin-right: auto;
+        z-index: 9999;
+    }
+}
+
+
 
 .hitokage-normal{
     width:100%;
