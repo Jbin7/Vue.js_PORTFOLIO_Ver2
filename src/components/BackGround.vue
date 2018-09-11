@@ -1,13 +1,18 @@
 <template>
     <div class="profile_background_img">
+
     </div>
 </template>
 
 <script>
     export default {
-        components:{
-        },
         name: '',
+        components:{},
+        data(){
+            return{
+
+            }
+        },
         props: {
 
         },
@@ -22,7 +27,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
     .profile_background_img{
         background:url('../../public/profile_img/background/1.png') no-repeat center top;
         -webkit-background-size: cover;

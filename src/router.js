@@ -8,17 +8,24 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: ()=>import('./views/Home.vue')
-    },
-    {
-      path: '/About',
-      name: 'About',
-      component: ()=>import('./views/About.vue')
+      component: ()=>import('./views/Home.vue'),
+        children:[
+          {
+              path: '/About',
+              name: 'About',
+              component: ()=>import('./views/About.vue')
+          },
+      ]
     },
     {
         path: '/Profile',
         name: 'Profile',
         component: ()=>import('./views/Profile.vue')
+    },
+    {
+      path: '/Megaman',
+      name: 'MegaMan',
+      component: ()=>import('./views/Megaman.vue')
     }
 
   ]

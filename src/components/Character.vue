@@ -23,21 +23,23 @@
 <style scoped>
 @media screen and (min-width: 400px) and (max-width: 800px) {
     .character-container{
+        position: absolute;
+        bottom:0;
+        margin-left:17%;
+        z-index: 9999;
         width:300px;
         height: 300px;
-        margin-left:auto;
-        margin-right: auto;
-        z-index: 9999;
     }
 }
 
 @media screen and (min-width: 800px) and (max-width: 2920px) {
     .character-container{
+        position: absolute;
+        bottom:0;
+        margin-left:40%;
+        z-index: 9999;
         width:300px;
         height: 300px;
-        margin-left:auto;
-        margin-right: auto;
-        z-index: 9999;
     }
 }
 
@@ -46,7 +48,6 @@
 .hitokage-normal{
     width:100%;
     height: 100%;
-    position: relative;
     animation: hitokage-normal 1s infinite;
     background-repeat: no-repeat;
 }
@@ -68,7 +69,6 @@
 .hitokage-run-right{
     width:100%;
     height: 100%;
-    position: relative;
     animation: hitokage-run-right 1s infinite;
 }
 
@@ -89,7 +89,6 @@
 .hitokage-run-left{
     width:100%;
     height: 100%;
-    position: relative;
     animation: hitokage-run-left 1s infinite;
 }
 

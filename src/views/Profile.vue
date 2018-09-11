@@ -1,12 +1,13 @@
 <template>
-    <div style="width:100%;">
+    <div style="position:absolute; width: 100%;height: 100vh;">
         <BackGround></BackGround>
-        <div class="object-container">
-            <Character></Character>
-        </div>
-        <div class="object-container" :style="'left:'+moveRange+'px;'">
-            <Character></Character>
-        </div>
+        <!--<back-object-layer></back-object-layer>-->
+        <Stage></Stage>
+        <character></character>
+        <!--<div class="stage-floor"></div>-->
+        <!--<div class="po-absolute" style="z-index: 9999">-->
+        <!--<Character></Character>-->
+        <!--</div>-->
     </div>
 </template>
 
@@ -15,7 +16,8 @@
         components:{
             'BackGround': ()=>import('@/components/BackGround.vue'),
             'Character': ()=>import('@/components/Character.vue'),
-            'BackObject': ()=>import('@/components/BackObject.vue')
+            'BackObjectLayer': ()=>import('@/components/BackObjectLayer.vue'),
+            'Stage':  ()=>import('@/components/Stage.vue')
         },
         name: '',
         data(){
@@ -30,18 +32,13 @@
             
         },
         mounted: function () {
-            var self = this
-            window.setInterval(function () {
-                self.moveRange = self.moveRange+2
-            },10)
+
         }
     }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    .object-container{
-        position: absolute;
-        bottom:10%;
-    }
+
+
 </style>
