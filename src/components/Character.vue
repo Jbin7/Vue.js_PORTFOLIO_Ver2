@@ -1,20 +1,41 @@
 <template>
     <div class="character-container">
-        <div class="hitokage-run-right"></div>
+        <div :class="activeClass"></div>
     </div>
 </template>
 
 <script>
     export default {
         name: '',
-        props: {
-
+        props: [
+            'state'
+        ],
+        data(){
+            return{
+                selCharacter: 'hitokage',
+                activeClass: 'hitokage-normal'
+            }
         },
         methods:{
 
         },
+        watch:{
+          state(newState){
+              switch (newState) {
+                  case 'default' :
+                    this.activeClass = this.selCharacter+'-normal'
+                    break;
+                  case 'left' :
+                    this.activeClass = this.selCharacter+'-run-left'
+                    break;
+                  case 'right' :
+                    this.activeClass = this.selCharacter+'-run-right'
+                    break;
+              }
+          }
+        },
         mounted: function () {
-
+            
         }
     }
 </script>
@@ -36,7 +57,7 @@
     .character-container{
         position: absolute;
         bottom:0;
-        margin-left:40%;
+        margin-left:42%;
         z-index: 9999;
         width:300px;
         height: 300px;
@@ -53,17 +74,9 @@
 }
 
 @keyframes hitokage-normal {
-    0%   {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_1.png");background-size: 100% 100%;}
-    10%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_1.png");background-size: 100% 100%;}
-    20%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_1.png");background-size: 100% 100%;}
-    30%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_2.png");background-size: 100% 100%;}
-    40%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_2.png");background-size: 100% 100%;}
-    50%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_2.png");background-size: 100% 100%;}
-    60%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_2.png");background-size: 100% 100%;}
-    70%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_3.png");background-size: 100% 100%;}
-    80%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_3.png");background-size: 100% 100%;}
-    90%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_3.png");background-size: 100% 100%;}
-    100%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_3.png");background-size: 100% 100%;}
+    0%,10%,20%   {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_1.png");background-size: 100% 100%;}
+    30%,40%,50%,60%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_2.png");background-size: 100% 100%;}
+    70%,80%,90%,100%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/normal_right_3.png");background-size: 100% 100%;}
 }
 
 .hitokage-run-right{
@@ -73,16 +86,11 @@
 }
 
 @keyframes hitokage-run-right {
-    0%   {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_1.png");background-size: 100% 100%;}
-    10%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_1.png");background-size: 100% 100%;}
-    20%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_2.png");background-size: 100% 100%;}
-    30%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_2.png");background-size: 100% 100%;}
-    40%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_3.png");background-size: 100% 100%;}
-    50%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_3.png");background-size: 100% 100%;}
-    60%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_4.png");background-size: 100% 100%;}
-    70%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_4.png");background-size: 100% 100%;}
-    80%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_5.png");background-size: 100% 100%;}
-    90%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_5.png");background-size: 100% 100%;}
+    0%,10%   {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_1.png");background-size: 100% 100%;}
+    20%,30%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_2.png");background-size: 100% 100%;}
+    40%,50%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_3.png");background-size: 100% 100%;}
+    60%,70%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_4.png");background-size: 100% 100%;}
+    80%,90%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_5.png");background-size: 100% 100%;}
     100%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_right_6.png");background-size: 100% 100%;}
 }
 
@@ -93,16 +101,11 @@
 }
 
 @keyframes hitokage-run-left {
-    0%   {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_1.png");background-size: 100% 100%;}
-    10%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_1.png");background-size: 100% 100%;}
-    20%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_2.png");background-size: 100% 100%;}
-    30%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_2.png");background-size: 100% 100%;}
-    40%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_3.png");background-size: 100% 100%;}
-    50%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_3.png");background-size: 100% 100%;}
-    60%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_4.png");background-size: 100% 100%;}
-    70%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_4.png");background-size: 100% 100%;}
-    80%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_5.png");background-size: 100% 100%;}
-    90%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_5.png");background-size: 100% 100%;}
+    0%,10%   {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_1.png");background-size: 100% 100%;}
+    20%,30%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_2.png");background-size: 100% 100%;}
+    40%,50%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_3.png");background-size: 100% 100%;}
+    60%,70%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_4.png");background-size: 100% 100%;}
+    80%,90%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_5.png");background-size: 100% 100%;}
     100%  {top: 0px; left: 0px; background: url("../../public/profile_img/hitokage/run_left_6.png");background-size: 100% 100%;}
 }
 
