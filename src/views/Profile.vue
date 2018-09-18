@@ -67,7 +67,7 @@
         position:absolute;
         left:50%;
         top:0px;
-        z-index: 9999;
+        z-index: 9998;
         opacity: 0;
     }
     .handle-left{
@@ -77,7 +77,7 @@
         position:absolute;
         left:0px;
         top:0px;
-        z-index: 9999;
+        z-index: 9998;
         opacity: 0;
     }
 

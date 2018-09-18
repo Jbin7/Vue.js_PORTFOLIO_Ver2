@@ -4,8 +4,14 @@
         <div class="backObject"><div class="pannel1"></div></div>
         <div class="backObject"><div class="pannel2"></div></div>
         <div class="backObject"><div class="pannel3"></div></div>
+        <div class="backObject"><div class="pannel4"></div></div>
+        <div class="backObject"><div class="pannel5"></div></div>
+
         <div class="backObject"><div class="razer-blade"></div></div>
         <div class="backObject"><div class="mac"></div></div>
+
+        <div class="backObject"><div class="squirtle"></div></div>
+        <div class="backObject"><div class="bulbasaur"></div></div>
     </div>
 </template>
 
@@ -40,7 +46,7 @@
                         window.clearInterval(this.interval);
                         var self=this
                         this.interval = window.setInterval(function () {
-                            self.left = self.left + 2
+                            self.left = self.left + 3
                         },10)
                         break;
                     case 'right' :
@@ -49,7 +55,7 @@
                         window.clearInterval(this.interval);
                         var self=this
                         this.interval = window.setInterval(function () {
-                            self.left = self.left - 2
+                            self.left = self.left - 3
                         },10)
                         break;
                 }
@@ -183,18 +189,24 @@
         background:url('../../public/profile_img/backObject/title.png') no-repeat center top;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
-        width: 400px;
-        height: 250px;
+        width: 600px;
+        height: 400px;
         position: absolute;
-        left: 400px;
+        left: 500px;
         bottom:200px;
+        animation: title-move 3s 1;
+    }
+
+    @keyframes title-move {
+        0%   {bottom:600px; left:500px;}
+        100%  {bottom:200px; left: 500px;}
     }
 
     .backObject .pannel1{
         background:url('../../public/profile_img/backObject/pannel1.png') no-repeat center top;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
-        width: 800px;
+        width: 740px;
         height: 500px;
         position: absolute;
         left: 1400px;
@@ -205,10 +217,10 @@
         background:url('../../public/profile_img/backObject/pannel2.png') no-repeat center top;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
-        width: 800px;
+        width: 740px;
         height: 500px;
         position: absolute;
-        left: 2400px;
+        left: 3400px;
         bottom:200px;
     }
 
@@ -216,10 +228,32 @@
         background:url('../../public/profile_img/backObject/pannel3.png') no-repeat center top;
         -webkit-background-size: 100% 100%;
         background-size: 100% 100%;
-        width: 800px;
+        width: 740px;
         height: 500px;
         position: absolute;
-        left: 3400px;
+        left: 4400px;
+        bottom:200px;
+    }
+
+    .backObject .pannel4{
+        background:url('../../public/profile_img/backObject/pannel4.png') no-repeat center top;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        width: 740px;
+        height: 500px;
+        position: absolute;
+        left: 2400px;
+        bottom:200px;
+    }
+
+    .backObject .pannel5{
+        background:url('../../public/profile_img/backObject/pannel5.png') no-repeat center top;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+        width: 740px;
+        height: 500px;
+        position: absolute;
+        left: 5400px;
         bottom:200px;
     }
 
@@ -230,9 +264,9 @@
         width: 1200px;
         height: 805px;
         position: absolute;
-        left: 4500px;
-        bottom:-100px;
-        z-index: 9999;
+        left: 7500px;
+        bottom:-50px;
+        z-index: 1;
     }
 
     .backObject .mac{
@@ -242,11 +276,59 @@
         width: 800px;
         height: 600px;
         position: absolute;
-        left: 100px;
-        bottom: 100px;
-        z-index: 9999;
+        left: 6500px;
+        bottom: 120px;
+        z-index: 1;
     }
 
+    .backObject .squirtle{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 100px;
+        bottom: 100px;
+        z-index: 3;
+        animation: squirtle-left-run 1s infinite, squirtle-move 30s infinite;
+    }
+
+    @keyframes squirtle-left-run {
+        0%,10%   {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_1.png");background-size: 100% 100%;}
+        20%,30%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_2.png");background-size: 100% 100%;}
+        40%,50%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_3.png");background-size: 100% 100%;}
+        60%,70%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_4.png");background-size: 100% 100%;}
+        80%,90%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_5.png");background-size: 100% 100%;}
+        100%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_6.png");background-size: 100% 100%;}
+    }
+
+    @keyframes squirtle-move {
+        0%   {bottom:0px; left:3000px;}
+        100%  {bottom:0px; left: 0px;}
+    }
+
+    .backObject .bulbasaur{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 100px;
+        bottom: 100px;
+        z-index: 3;
+        animation: bulbasaur-left-run 1s infinite, squirtle-move 30s infinite;
+        animation-delay: 1s;
+    }
+
+    @keyframes bulbasaur-left-run {
+        0%,10%   {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_1.png");background-size: 100% 100%;}
+        20%,30%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_2.png");background-size: 100% 100%;}
+        40%,50%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_3.png");background-size: 100% 100%;}
+        60%,70%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_4.png");background-size: 100% 100%;}
+        80%,90%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_5.png");background-size: 100% 100%;}
+        100%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_1.png");background-size: 100% 100%;}
+    }
+
+    @keyframes bulbasaur-move {
+        0%   {bottom:0px; left:3000px;}
+        100%  {bottom:0px; left: 0px;}
+    }
 
 
 </style>
