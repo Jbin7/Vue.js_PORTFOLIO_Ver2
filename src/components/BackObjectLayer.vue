@@ -192,14 +192,33 @@
         width: 600px;
         height: 400px;
         position: absolute;
-        left: 500px;
+        left: 600px;
         bottom:200px;
         animation: title-move 3s 1;
     }
 
     @keyframes title-move {
-        0%   {bottom:600px; left:500px;}
-        100%  {bottom:200px; left: 500px;}
+        0%   {bottom:600px; left:600px;}
+        100%  {bottom:200px; left: 600px;}
+    }
+
+    @media screen and (min-width: 400px) and (max-width: 800px) {
+        .backObject .title{
+            background:url('../../public/profile_img/backObject/title.png') no-repeat center top;
+            -webkit-background-size: 100% 100%;
+            background-size: 100% 100%;
+            width: 600px;
+            height: 400px;
+            position: absolute;
+            left: -100px;
+            bottom:200px;
+            animation: title-move 3s 1;
+        }
+
+        @keyframes title-move {
+            0%   {bottom:600px; left:-100px;}
+            100%  {bottom:200px; left: -100px;}
+        }
     }
 
     .backObject .pannel1{
@@ -292,12 +311,12 @@
     }
 
     @keyframes squirtle-left-run {
-        0%,10%   {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_1.png");background-size: 100% 100%;}
-        20%,30%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_2.png");background-size: 100% 100%;}
-        40%,50%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_3.png");background-size: 100% 100%;}
-        60%,70%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_4.png");background-size: 100% 100%;}
-        80%,90%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_5.png");background-size: 100% 100%;}
-        100%  {bottom: 0px; background: url("../../public/profile_img/squirtle/run_left_6.png");background-size: 100% 100%;}
+        0%,10%   {bottom: 0px; background: url("../../public/profile_img/character/squirtle/run_left_1.png");background-size: 100% 100%;}
+        20%,30%  {bottom: 0px; background: url("../../public/profile_img/character/squirtle/run_left_2.png");background-size: 100% 100%;}
+        40%,50%  {bottom: 0px; background: url("../../public/profile_img/character/squirtle/run_left_3.png");background-size: 100% 100%;}
+        60%,70%  {bottom: 0px; background: url("../../public/profile_img/character/squirtle/run_left_4.png");background-size: 100% 100%;}
+        80%,90%  {bottom: 0px; background: url("../../public/profile_img/character/squirtle/run_left_5.png");background-size: 100% 100%;}
+        100%  {bottom: 0px; background: url("../../public/profile_img/character/squirtle/run_left_6.png");background-size: 100% 100%;}
     }
 
     @keyframes squirtle-move {
@@ -317,12 +336,12 @@
     }
 
     @keyframes bulbasaur-left-run {
-        0%,10%   {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_1.png");background-size: 100% 100%;}
-        20%,30%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_2.png");background-size: 100% 100%;}
-        40%,50%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_3.png");background-size: 100% 100%;}
-        60%,70%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_4.png");background-size: 100% 100%;}
-        80%,90%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_5.png");background-size: 100% 100%;}
-        100%  {bottom: 0px; background: url("../../public/profile_img/bulbasaur/run_left_1.png");background-size: 100% 100%;}
+        0%,10%   {bottom: 0px; background: url("../../public/profile_img/character/bulbasaur/run_left_1.png");background-size: 100% 100%;}
+        20%,30%  {bottom: 0px; background: url("../../public/profile_img/character/bulbasaur/run_left_2.png");background-size: 100% 100%;}
+        40%,50%  {bottom: 0px; background: url("../../public/profile_img/character/bulbasaur/run_left_3.png");background-size: 100% 100%;}
+        60%,70%  {bottom: 0px; background: url("../../public/profile_img/character/bulbasaur/run_left_4.png");background-size: 100% 100%;}
+        80%,90%  {bottom: 0px; background: url("../../public/profile_img/character/bulbasaur/run_left_5.png");background-size: 100% 100%;}
+        100%  {bottom: 0px; background: url("../../public/profile_img/character/bulbasaur/run_left_1.png");background-size: 100% 100%;}
     }
 
     @keyframes bulbasaur-move {
