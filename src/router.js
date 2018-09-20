@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: ()=>import('./views/Home.vue'),
+      component: ()=>import('./views/Profile.vue'),
         children:[
           {
               path: '/About',
@@ -22,11 +22,5 @@ export default new Router({
         name: 'Profile',
         component: ()=>import('./views/Profile.vue')
     },
-    {
-      path: '/Megaman',
-      name: 'MegaMan',
-      component: ()=>import('./views/Megaman.vue')
-    }
-
   ]
 })

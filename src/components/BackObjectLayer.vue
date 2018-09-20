@@ -202,7 +202,7 @@
         100%  {bottom:200px; left: 600px;}
     }
 
-    @media screen and (min-width: 400px) and (max-width: 800px) {
+    @media screen and (min-width: 300px) and (max-width: 800px) {
         .backObject .title{
             background:url('../../public/profile_img/backObject/title.png') no-repeat center top;
             -webkit-background-size: 100% 100%;
