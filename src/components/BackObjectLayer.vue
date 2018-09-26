@@ -61,7 +61,7 @@
                 }
                 var ele = document.getElementById('backObjectLayer')
                 // console.log(window.getComputedStyle(ele).left)
-                console.log(ele.style.getPropertyValue('--left'))
+                // console.log(ele.style.getPropertyValue('--left'))
             }
         },
         mounted: function () {

@@ -8,8 +8,22 @@
             <character :state="state"></character>
 
             <!--방향전환 이벤트 핸들-->
-            <div class="handle-left" @mousedown="handleLeft" @mouseup="handleDefault" @touchstart="handleLeft" @touchend="handleDefault"></div>
-            <div class="handle-right" @mousedown="handleRight" @mouseup="handleDefault" @touchstart="handleRight" @touchend="handleDefault"></div>
+            <div class="handle-left"
+                 @mousedown="handleLeft"
+                 @mouseup="handleDefault"
+                 @touchstart="handleLeft"
+                 @touchend="handleDefault"
+                 @keyup.37="handleLeft"
+                 @keydown.37="handleDefault">
+
+            </div>
+            <div class="handle-right"
+                 @mousedown="handleRight"
+                 @mouseup="handleDefault"
+                 @touchstart="handleRight"
+                 @touchend="handleDefault"
+                 @keyup.39="handleRight"
+                 @keydown.39="handleDefault"></div>
 
         </div>
 

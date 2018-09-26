@@ -29,6 +29,6 @@
   .bold       { font-weight: 700 }
   .bolder     { font-weight: 900 }
 
-  html, body { width:100%; height:100%; overflow:hidden;}
+  html, body { width:100%; height:100%; overflow:auto;}
 
 </style>
