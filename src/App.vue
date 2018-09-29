@@ -14,7 +14,7 @@
 
         },
         mounted: function () {
-
+            this.$router.push('about')
         }
     }
 </script>

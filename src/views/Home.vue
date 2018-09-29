@@ -100,8 +100,7 @@
             drawer: null,
             items: [
                 { icon: 'contacts', text: 'About' },
-                { icon: 'contacts', text: 'Profile' },
-                { icon: 'content_copy', text: 'Project' },
+                { icon: 'content_copy', text: 'Projects' },
                 // {
                 //     icon: 'keyboard_arrow_up',
                 //     'icon-alt': 'keyboard_arrow_down',
