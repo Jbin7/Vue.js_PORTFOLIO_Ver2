@@ -1,6 +1,14 @@
 export default {
     projectList:[
         {
+            id: 6,
+            name: '청주 정식품 베지밀 FSP',
+            detail: '',
+            year: '2018',
+            path: 'nongshim_chungs',
+            imgMaxCnt:7
+        },
+        {
             id: 5,
             name: '농심 연변 백산수 PMS',
             detail: '',
