@@ -16,7 +16,7 @@
 
               <v-flex xs12 sm6>
                 <div>
-                  <img src="/img/profile.jpg" width="100%;">
+                  <img src="/portfolio/img/profile.jpg" width="100%;">
                 </div>
               </v-flex>
 
@@ -30,10 +30,10 @@
                 </div>
                 <div style="margin-top: 30px;">
                   <div style="display: inline-block; margin: 10px; cursor: pointer">
-                    <a href="https://github.com/Jbin7" target="_blank"><img src="/img/github.png" style="width: 50px;"></a>
+                    <a href="https://github.com/Jbin7" target="_blank"><img src="/portfolio/img/github.png" style="width: 50px;"></a>
                   </div>
                   <div style="display: inline-block; margin: 10px; cursor: pointer">
-                    <a href="http://jhonnywest.tistory.com/" target="_blank"><img src="/img/tistory.png" style="width: 50px;"></a>
+                    <a href="http://jhonnywest.tistory.com/" target="_blank"><img src="/portfolio/img/tistory.png" style="width: 50px;"></a>
                   </div>
                   <div style="font-size: 14pt">kakao: jbin7</div>
                 </div>

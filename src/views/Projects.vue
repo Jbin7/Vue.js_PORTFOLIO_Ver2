@@ -27,7 +27,7 @@
                                                  style="padding: 10px;"
                                                  @click="selProject(item.id)"
                                             >
-                                                <img :src="'/img/projects/'+item.path+'/1.png'" style="width: 100%;">
+                                                <img :src="'/portfolio/img/projects/'+item.path+'/1.png'" style="width: 100%;">
                                                 <div style="display: inline-block; font-size: 10pt;">{{item.name}}</div>
                                             </div>
                                         </transition-group>

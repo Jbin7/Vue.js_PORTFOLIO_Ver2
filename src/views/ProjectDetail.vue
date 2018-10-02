@@ -15,7 +15,7 @@
                                     </div>
 
                                     <div v-for="i in selProject.imgMaxCnt">
-                                        <img :src="'/img/projects/'+selProject.path+'/'+i+'.png'" style="width: 100%; max-width: 800px;">
+                                        <img :src="'/portfolio/img/projects/'+selProject.path+'/'+i+'.png'" style="width: 100%; max-width: 800px;">
                                     </div>
                                 </v-flex>
 
